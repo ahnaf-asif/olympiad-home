@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Trophy, ArrowRight, Compass, BookOpen, Mail, Sparkles } from "lucide-react";
+import { X, Trophy, ArrowRight, Compass, BookOpen, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 interface MobileDrawerProps {
@@ -32,7 +32,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm md:hidden"
+            className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs md:hidden"
           />
 
           {/* Drawer Panel */}
@@ -49,9 +49,9 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                 <Link
                   href="/"
                   onClick={onClose}
-                  className="flex items-center gap-2 font-extrabold text-lg tracking-tight text-slate-900"
+                  className="flex items-center gap-2 font-extrabold text-lg tracking-tight text-slate-900 outline-none focus:outline-none select-none"
                 >
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-500/30">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm">
                     <Trophy className="h-5 w-5" />
                   </div>
                   <span>Olympiad Playground</span>
@@ -59,7 +59,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                 <button
                   onClick={onClose}
                   aria-label="Close Menu"
-                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700 active:scale-95 transition-transform"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700 active:scale-95 transition-transform outline-none focus:outline-none"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -76,7 +76,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                       key={link.href}
                       href={link.href}
                       onClick={onClose}
-                      className={`flex items-center gap-3.5 px-4 py-3.5 rounded-xl font-medium text-sm transition-all active:scale-[0.98] min-h-[44px] ${
+                      className={`flex items-center gap-3.5 px-4 py-3.5 rounded-xl font-medium text-sm transition-all active:scale-[0.98] min-h-[44px] outline-none focus:outline-none ${
                         isActive
                           ? "bg-indigo-50 text-indigo-600 font-semibold"
                           : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"

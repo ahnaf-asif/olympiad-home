@@ -26,9 +26,9 @@ export function Navbar() {
           {/* Brand Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg"
+            className="flex items-center gap-2.5 outline-none focus:outline-none focus:ring-0 select-none group"
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm group-hover:bg-indigo-700 transition-colors">
               <Trophy className="h-5 w-5" />
             </div>
             <span className="font-extrabold text-lg text-slate-900 tracking-tight">
@@ -44,7 +44,7 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-semibold transition-colors py-1 relative ${
+                  className={`text-sm font-semibold transition-colors py-1 relative outline-none focus:outline-none ${
                     isActive
                       ? "text-indigo-600 font-bold"
                       : "text-slate-600 hover:text-slate-900"
@@ -74,7 +74,7 @@ export function Navbar() {
             <button
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open Navigation Menu"
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 active:scale-95 transition-all"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 active:scale-95 transition-all outline-none focus:outline-none"
             >
               <Menu className="h-5 w-5" />
             </button>
