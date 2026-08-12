@@ -14,8 +14,7 @@ import {
   ArrowRight,
   CheckCircle2,
   Users,
-  Calendar,
-  Sparkles,
+  Clock,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -32,8 +31,8 @@ const mathCohorts = [
     title: "Primary Math Olympiad Foundation",
     description: "Building early numerical intuition, visual geometry logic, pattern recognition, and elementary problem-solving confidence.",
     highlights: ["Visual Logic & Spatial Reasoning", "Elementary Number Patterns", "Weekly Live Classes + Guided Homework"],
-    badge: "Active Enrollment",
-    badgeVariant: "emerald" as const,
+    badge: "Opening Soon",
+    badgeVariant: "amber" as const,
   },
   {
     id: "junior",
@@ -42,7 +41,7 @@ const mathCohorts = [
     title: "Junior Math Olympiad Masterclass",
     description: "Rigorous introductory Combinatorics, Modular Arithmetic, Euclidean Geometry proofs, and Algebraic manipulation for regional & national contests.",
     highlights: ["Modular Arithmetic & Divisibility", "Euclidean Geometry Proofs", "Combinatorial Counting & Pigeonhole"],
-    badge: "Active Enrollment",
+    badge: "Opening Soon",
     badgeVariant: "indigo" as const,
   },
   {
@@ -52,7 +51,7 @@ const mathCohorts = [
     title: "Secondary IMO Track Advanced Camp",
     description: "Advanced proof-based problem solving targeting National Math Olympiad selection and the International Mathematical Olympiad (IMO).",
     highlights: ["Functional Equations & Bounds", "Advanced Invariants & Graph Theory", "IMO Shortlist Proof Techniques"],
-    badge: "Active Enrollment",
+    badge: "Opening Soon",
     badgeVariant: "purple" as const,
   },
 ];
@@ -88,7 +87,7 @@ export default function CoursesPage() {
   return (
     <>
       <PageHeader
-        badge="Live Cohort Programs"
+        badge="Cohorts Opening Soon"
         title="Math Olympiad Live Courses & Assessment Network"
         subtitle="Medalist-led live interactive classes paired with progressive problem scaffolding and nationwide club assessment loops."
       />
@@ -97,8 +96,8 @@ export default function CoursesPage() {
       <section className="py-12 md:py-20 bg-slate-50 border-b border-slate-200/80">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            badge="Math Olympiad Tracks"
-            title="Cohorts Open for Primary, Junior & Secondary Sections"
+            badge="Upcoming Cohorts"
+            title="Cohorts Launching for Primary, Junior & Secondary Sections"
             subtitle="Structured curricula tailored for every stage of Bangladesh's national Math Olympiad pathway."
           />
 
@@ -113,8 +112,9 @@ export default function CoursesPage() {
                     <span className="text-xs font-mono font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
                       {cohort.classRange}
                     </span>
-                    <Badge variant={cohort.badgeVariant} className="text-[11px]">
-                      {cohort.badge}
+                    <Badge variant={cohort.badgeVariant} className="text-[11px] gap-1">
+                      <Clock className="h-3 w-3" />
+                      <span>{cohort.badge}</span>
                     </Badge>
                   </div>
 
@@ -148,7 +148,7 @@ export default function CoursesPage() {
 
                   <Button asChild variant="gradient" size="sm">
                     <Link href="/contact" className="flex items-center gap-1.5">
-                      <span>Enroll Now</span>
+                      <span>Join Waitlist</span>
                       <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
                   </Button>

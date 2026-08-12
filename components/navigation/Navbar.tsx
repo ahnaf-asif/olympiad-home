@@ -63,8 +63,8 @@ export function Navbar() {
           {/* Desktop Right CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Button asChild variant="default" size="sm">
-              <Link href="/courses" className="flex items-center gap-2">
-                <span>Join Live Cohorts</span>
+              <Link href="/contact" className="flex items-center gap-2">
+                <span>Join Launch Waitlist</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>

@@ -93,10 +93,10 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
 
             {/* Bottom Section */}
             <div className="pt-6 border-t border-slate-100 flex flex-col gap-3">
-              <div className="rounded-xl bg-slate-50 p-4 border border-slate-200/60 flex items-center gap-3">
-                <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-xs font-semibold text-slate-600">
-                  Primary, Junior & Secondary Cohorts Open
+              <div className="rounded-xl bg-amber-50 p-4 border border-amber-200/80 flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
+                <span className="text-xs font-semibold text-amber-900">
+                  Primary, Junior & Secondary Cohorts Launching Soon
                 </span>
               </div>
 
@@ -106,8 +106,8 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                 className="w-full justify-between"
                 onClick={onClose}
               >
-                <Link href="/courses">
-                  <span>Join Live Cohorts</span>
+                <Link href="/contact">
+                  <span>Join Launch Waitlist</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

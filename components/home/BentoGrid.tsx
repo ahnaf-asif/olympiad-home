@@ -10,25 +10,25 @@ const solutions = [
   {
     icon: Lightbulb,
     title: "Progressive Math Scaffolding Archive",
-    badge: "Launching in 30 Days",
+    badge: "Launching in ~30 Days",
     description: "Eliminating solution spoilers. Our Math Olympiad archive provides multi-tier conceptual prompts (Spark → Lemma → Partial Proof) for Combinatorics, Geometry, Number Theory, and Algebra.",
     highlight: "Primary, Junior & Secondary Problem Sets",
-    linkText: "Explore Archive",
+    linkText: "Explore Archive Roadmap",
     linkHref: "/academics",
   },
   {
     icon: Trophy,
     title: "Medalist-Led Live Cohorts",
-    badge: "Active Enrollment",
+    badge: "Cohorts Opening Soon",
     description: "Interactive live classes for Primary (Class 3-5), Junior (Class 6-8), and Secondary (Class 9-12) sections taught by national IMO medalists & Gonit Utshob coaches.",
     highlight: "Weekly Live Instruction & Office Hours",
-    linkText: "View Live Cohorts",
+    linkText: "View Upcoming Cohorts",
     linkHref: "/courses",
   },
   {
     icon: Compass,
     title: "Nationwide Club Assessment Network",
-    badge: "Club Partnerships",
+    badge: "Club Partnerships Open",
     description: "Partnering with school and college math clubs across Bangladesh to conduct synchronized online assessments and local offline mock exams.",
     highlight: "School & College Club Exam League",
     linkText: "Partner With Us",
@@ -69,7 +69,7 @@ export function BentoGrid() {
                     <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-xs">
                       <Icon className="h-5 w-5 md:h-6 md:w-6" />
                     </div>
-                    <Badge variant="dark" className="text-[10px] md:text-xs">
+                    <Badge variant="amber" className="text-[10px] md:text-xs">
                       {item.badge}
                     </Badge>
                   </div>

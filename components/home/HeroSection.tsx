@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Brain, CheckCircle2 } from "lucide-react";
+import { ArrowRight, BookOpen, Brain, CheckCircle2, Clock } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 
@@ -20,14 +20,13 @@ export function HeroSection() {
             
             {/* Status Badge */}
             <Badge variant="indigo" className="py-1 px-3 text-[11px] sm:text-xs font-bold gap-2 bg-slate-800 text-indigo-300 border border-indigo-500/40 shadow-xs">
-              <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Math Olympiad Archive & Live Cohorts</span>
+              <Clock className="h-3.5 w-3.5 text-amber-400" />
+              <span>Launch Phase 1: Archiving & Live Cohorts</span>
             </Badge>
 
-            {/* Short Punchy Headline */}
+            {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
-              Olympiad Math, <br className="hidden sm:inline" />
-              <span className="text-indigo-400">Reimagined.</span>
+              Olympiad <span className="text-indigo-400">Reimagined.</span>
             </h1>
 
             {/* Subheadline */}
@@ -39,15 +38,15 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto pt-1">
               <Button asChild variant="gradient" size="lg" className="shadow-lg shadow-indigo-500/25">
                 <Link href="/courses" className="flex items-center justify-center gap-2">
-                  <span>Join Live Cohorts</span>
+                  <span>Cohorts Opening Soon</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
 
               <Button asChild variant="outline" size="lg" className="border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white">
-                <Link href="/academics" className="flex items-center justify-center gap-2">
+                <Link href="/contact" className="flex items-center justify-center gap-2">
                   <BookOpen className="h-4 w-4 text-indigo-400" />
-                  <span>Explore Math Archive</span>
+                  <span>Join Launch Waitlist</span>
                 </Link>
               </Button>
             </div>
@@ -70,7 +69,7 @@ export function HeroSection() {
 
           </div>
 
-          {/* Right Column: Hero Showcase Card (Desktop Only to eliminate mobile cognitive clutter) */}
+          {/* Right Column: Hero Showcase Card (Desktop Only) */}
           <div className="hidden lg:block lg:col-span-5">
             <div className="rounded-2xl bg-slate-800/90 p-6 md:p-8 shadow-xl border border-slate-700 flex flex-col gap-5">
               
@@ -87,7 +86,7 @@ export function HeroSection() {
                   </div>
                 </div>
                 <Badge variant="indigo" className="text-[10px] bg-indigo-500/20 text-indigo-300 border-indigo-500/40">
-                  Secondary Section
+                  Opening Soon
                 </Badge>
               </div>
 
@@ -107,9 +106,9 @@ export function HeroSection() {
               </div>
 
               <div className="pt-1 flex items-center justify-between text-xs font-bold">
-                <span className="text-slate-400">842 Students Solved</span>
-                <Link href="/academics" className="text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
-                  <span>Practice Problem</span>
+                <span className="text-slate-400">Archive Launching in ~30 Days</span>
+                <Link href="/contact" className="text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                  <span>Get Notified</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
