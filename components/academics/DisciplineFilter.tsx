@@ -1,18 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { DisciplineCard, Discipline } from "./DisciplineCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight, X, Clock } from "lucide-react";
 
 const disciplinesData: Discipline[] = [
   {
     id: "math",
     category: "math",
     title: "Olympiad Mathematics",
-    track: "Active Launch Program",
+    track: "Active Launch Track (~30 Days)",
     level: "Primary, Junior & Secondary Sections",
     description: "Rigorous proof-based mathematics focusing on invariant discovery, algebraic bounds, and non-routine problem solving across Primary, Junior, and Secondary divisions.",
     topics: ["Combinatorics", "Number Theory", "Euclidean Geometry", "Functional Equations"],
@@ -88,7 +89,7 @@ export function DisciplineFilter() {
         <div className="flex flex-wrap items-center justify-center gap-2 mb-8 md:mb-12">
           {[
             { id: "all", label: "All Disciplines" },
-            { id: "math", label: "Mathematics (Active Launch)" },
+            { id: "math", label: "Mathematics (Launching Soon)" },
             { id: "physics", label: "Physics (Roadmap)" },
             { id: "informatics", label: "Informatics (Roadmap)" },
             { id: "economics", label: "Economics (Roadmap)" },
@@ -126,8 +127,9 @@ export function DisciplineFilter() {
               
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
                 <div className="flex items-center gap-2">
-                  <Badge variant="indigo" className="bg-indigo-600 text-white text-xs">
-                    {selectedDiscipline.track}
+                  <Badge variant="indigo" className="bg-indigo-600 text-white text-xs gap-1">
+                    <Clock className="h-3 w-3" />
+                    <span>{selectedDiscipline.track}</span>
                   </Badge>
                   <span className="text-xs text-slate-400 font-mono">
                     {selectedDiscipline.problemCount}+ Problems
@@ -165,9 +167,11 @@ export function DisciplineFilter() {
 
               <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-4">
                 <span className="text-xs text-slate-400">Level: {selectedDiscipline.level}</span>
-                <Button variant="gradient" size="default" onClick={() => setSelectedDiscipline(null)}>
-                  <span>{selectedDiscipline.category === "math" ? "Start Math Practice" : "View Roadmap"}</span>
-                  <ArrowRight className="h-4 w-4" />
+                <Button asChild variant="gradient" size="default">
+                  <Link href="/contact" onClick={() => setSelectedDiscipline(null)}>
+                    <span>Join Launch Waitlist</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
 
