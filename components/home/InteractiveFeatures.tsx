@@ -10,21 +10,21 @@ const featureTabs = [
     title: "Math & Physics Duels",
     subtitle: "Real-time 1v1 problem solving",
     icon: Swords,
-    badge: "Live Arena",
+    badge: "Roadmap Arena",
   },
   {
     id: "mental",
     title: "Mental Math Sprints",
     subtitle: "Rapid logic & calculation rounds",
     icon: Zap,
-    badge: "Speed Sprint",
+    badge: "Roadmap Sprint",
   },
   {
     id: "ai-checker",
     title: "AI Proof Checker",
     subtitle: "Logical step-by-step verification",
     icon: Cpu,
-    badge: "Engine Preview",
+    badge: "Upcoming Engine",
   },
 ];
 
@@ -36,9 +36,9 @@ export function InteractiveFeatures() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <SectionHeading
-          badge="Interactive Formats"
-          title="Gamified Learning & Real-Time Practice"
-          subtitle="Cognitive growth thrives when practice is active, collaborative, and immediate."
+          badge="Technology Roadmap"
+          title="Gamified Practice & Next-Gen Verification"
+          subtitle="Explore the upcoming interactive features being engineered for our digital ecosystem."
         />
 
         {/* Selector Row */}
@@ -101,7 +101,7 @@ export function InteractiveFeatures() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
               <div className="lg:col-span-6 flex flex-col gap-3 md:gap-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">
-                  Live Matchmaking Arena
+                  Roadmap Matchmaking Arena
                 </span>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
                   Math & Physics Duels
@@ -123,11 +123,11 @@ export function InteractiveFeatures() {
 
               <div className="lg:col-span-6 rounded-xl bg-slate-800 p-4 md:p-6 border border-slate-700 space-y-3 md:space-y-4">
                 <div className="flex items-center justify-between text-xs font-bold border-b border-slate-700 pb-2.5">
-                  <span className="text-emerald-400 flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                    Duel #8942 Active
+                  <span className="text-indigo-400 flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
+                    Upcoming Engine Prototype
                   </span>
-                  <span className="font-mono text-amber-400 text-[11px]">04:12 Remaining</span>
+                  <span className="font-mono text-amber-400 text-[11px]">Roadmap Feature</span>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-center">
                   <div className="p-3 rounded-lg bg-slate-900 border border-slate-700">
@@ -147,7 +147,7 @@ export function InteractiveFeatures() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
               <div className="lg:col-span-6 flex flex-col gap-3 md:gap-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
-                  Speed Sprints
+                  Roadmap Speed Sprints
                 </span>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
                   Mental Math Sprints
@@ -173,7 +173,7 @@ export function InteractiveFeatures() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
               <div className="lg:col-span-6 flex flex-col gap-3 md:gap-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
-                  Proof Verification Engine
+                  Upcoming Engine Preview
                 </span>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
                   AI Solve Checker for Logical Proofs

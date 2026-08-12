@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Trophy, ArrowRight, Compass, BookOpen, Mail } from "lucide-react";
+import { X, Trophy, ArrowRight, Compass, BookOpen, Mail, Video } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 interface MobileDrawerProps {
@@ -14,9 +14,10 @@ interface MobileDrawerProps {
 
 const navLinks = [
   { name: "Home", href: "/", icon: Compass },
+  { name: "Academics & Archive", href: "/academics", icon: BookOpen },
+  { name: "Live Courses", href: "/courses", icon: Video },
   { name: "About & Mission", href: "/about", icon: Trophy },
-  { name: "Academics & Pathways", href: "/academics", icon: BookOpen },
-  { name: "Contact & Community", href: "/contact", icon: Mail },
+  { name: "Contact & Clubs", href: "/contact", icon: Mail },
 ];
 
 export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
@@ -32,7 +33,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs md:hidden"
+            className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs lg:hidden"
           />
 
           {/* Drawer Panel */}
@@ -41,7 +42,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 250 }}
-            className="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-white p-6 shadow-2xl flex flex-col justify-between md:hidden border-l border-slate-200"
+            className="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-white p-6 shadow-2xl flex flex-col justify-between lg:hidden border-l border-slate-200"
           >
             {/* Header */}
             <div>
@@ -95,7 +96,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               <div className="rounded-xl bg-slate-50 p-4 border border-slate-200/60 flex items-center gap-3">
                 <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-xs font-semibold text-slate-600">
-                  Bi-Weekly Contest Registration Open
+                  Primary, Junior & Secondary Cohorts Open
                 </span>
               </div>
 
@@ -105,8 +106,8 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                 className="w-full justify-between"
                 onClick={onClose}
               >
-                <Link href="/academics">
-                  <span>Explore Pathways</span>
+                <Link href="/courses">
+                  <span>Join Live Cohorts</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

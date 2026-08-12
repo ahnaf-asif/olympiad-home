@@ -9,9 +9,10 @@ import { MobileDrawer } from "./MobileDrawer";
 
 const navItems = [
   { label: "Home", href: "/" },
+  { label: "Academics & Archive", href: "/academics" },
+  { label: "Live Courses", href: "/courses" },
   { label: "About & Mission", href: "/about" },
-  { label: "Academics & Pathways", href: "/academics" },
-  { label: "Contact & Community", href: "/contact" },
+  { label: "Contact & Clubs", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -37,7 +38,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-7">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -60,17 +61,17 @@ export function Navbar() {
           </nav>
 
           {/* Desktop Right CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <Button asChild variant="default" size="sm">
-              <Link href="/academics" className="flex items-center gap-2">
-                <span>Explore Pathways</span>
+              <Link href="/courses" className="flex items-center gap-2">
+                <span>Join Live Cohorts</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open Navigation Menu"

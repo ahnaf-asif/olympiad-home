@@ -3,28 +3,28 @@ import { Heart, Trophy, Lightbulb, Users } from "lucide-react";
 
 const metrics = [
   {
-    icon: Heart,
-    value: "100% Non-Profit",
-    label: "Core Model",
-    description: "Reinvested in Bangladesh youth & regional grants",
+    icon: Lightbulb,
+    value: "Math Archive",
+    label: "Scaffolding Engine",
+    description: "Step-by-step conceptual hints without solution spoilers",
   },
   {
     icon: Trophy,
-    value: "Bi-Weekly",
-    label: "Live Contests",
-    description: "Timed competitions with editorial solution writeups",
-  },
-  {
-    icon: Lightbulb,
-    value: "Progressive",
-    label: "Hint Architecture",
-    description: "Step-by-step guidance without solution spoilers",
+    value: "Live Cohorts",
+    label: "Primary, Junior & Secondary",
+    description: "Interactive classes led by BD national medalists",
   },
   {
     icon: Users,
-    value: "50,000+",
-    label: "Target Minds",
-    description: "National outreach across 64 districts in BD",
+    value: "Club Network",
+    label: "Online & Offline Exams",
+    description: "Collaborating with school & college math clubs nationwide",
+  },
+  {
+    icon: Heart,
+    value: "100% Non-Profit",
+    label: "Core Foundation",
+    description: "Reinvested in server bandwidth & student contest grants",
   },
 ];
 

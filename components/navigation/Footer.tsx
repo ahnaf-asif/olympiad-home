@@ -21,7 +21,7 @@ export function Footer() {
             </Link>
             
             <p className="text-xs md:text-sm text-slate-400 leading-relaxed max-w-md">
-              A modern, non-profit EdTech ecosystem designed to transform cognitive development and Olympiad culture in Bangladesh through structured training, live contests, and progressive hint architecture.
+              A modern, non-profit EdTech ecosystem designed to transform cognitive development and Olympiad culture in Bangladesh through structured training, live courses, and progressive hint archiving.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 pt-1">
@@ -48,43 +48,49 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">
-                  About & Gonit Utshob Vision
+                <Link href="/academics" className="hover:text-white transition-colors">
+                  Academics & Open Archive
                 </Link>
               </li>
               <li>
-                <Link href="/academics" className="hover:text-white transition-colors">
-                  Academics & Pathways
+                <Link href="/courses" className="hover:text-white transition-colors">
+                  Live Cohort Courses
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-white transition-colors">
+                  About & Mission
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact & FAQs
+                  Contact & Club Partnerships
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Disciplines */}
+          {/* Column 3: Active & Upcoming Tracks */}
           <div className="flex flex-col gap-2.5">
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-200">
-              Core Disciplines
+              Academic Programs
             </h4>
             <ul className="flex flex-col gap-2 text-xs md:text-sm">
-              <li className="hover:text-white transition-colors cursor-pointer">
-                Mathematics (IMO Track)
+              <li className="text-white font-bold flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span>Math Olympiad (Primary/Junior/Secondary)</span>
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer">
-                Physics (IPhO Track)
+              <li className="text-slate-400">
+                Physics Olympiad (Upcoming)
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer">
-                Informatics (IOI Track)
+              <li className="text-slate-400">
+                Informatics & Logic (Upcoming)
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer">
-                Economics (IEO Track)
+              <li className="text-slate-400">
+                Economics Olympiad (Upcoming)
               </li>
-              <li className="text-indigo-400 font-medium">
-                Social Sciences (New Track)
+              <li className="text-slate-400">
+                Social Sciences (Upcoming)
               </li>
             </ul>
           </div>
@@ -95,7 +101,7 @@ export function Footer() {
               Community & Governance
             </h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              All live course proceeds directly reinvest into platform hosting, open problem archives, and regional contest grants.
+              All live course proceeds directly reinvest into open problem archives, server hosting, and regional contest grants.
             </p>
             <div className="flex items-center gap-2.5 pt-1">
               <a

@@ -29,10 +29,10 @@ export function ContactForm() {
             <CheckCircle2 className="h-8 w-8" />
           </div>
           <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">
-            Message Sent Successfully!
+            Message Received!
           </h3>
           <p className="text-xs md:text-sm text-slate-600 max-w-md leading-relaxed">
-            Thank you, <strong>{formData.name}</strong>. Our team and national mentor panel will review your inquiry and reply within 24-48 hours.
+            Thank you, <strong>{formData.name}</strong>. Our team will review your inquiry regarding <strong>{formData.inquiryType === "club" ? "School/College Club Partnership" : formData.inquiryType}</strong> and reply within 24-48 hours.
           </p>
           <Button
             variant="outline"
@@ -51,10 +51,10 @@ export function ContactForm() {
             <div className="flex items-center justify-between border-b border-slate-100 pb-3 md:pb-4">
               <div>
                 <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">
-                  Get in Touch with Our Team
+                  Connect with The Olympiad Playground
                 </h3>
                 <p className="text-[11px] md:text-xs text-slate-600 mt-0.5">
-                  Have questions about live cohorts, mentorship, or institutional partnerships?
+                  Have questions about Math Live Cohorts, Archiving, or Club Partnerships?
                 </p>
               </div>
               <Badge variant="indigo" className="text-[10px] md:text-xs">Official Channel</Badge>
@@ -68,8 +68,8 @@ export function ContactForm() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                 {[
                   { id: "student", label: "Student / Aspirant" },
+                  { id: "club", label: "School/College Club" },
                   { id: "mentor", label: "Mentor / Volunteer" },
-                  { id: "institution", label: "School / Institution" },
                 ].map((type) => (
                   <button
                     key={type.id}
@@ -91,7 +91,7 @@ export function ContactForm() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
               <div className="flex flex-col gap-1">
                 <label htmlFor="name" className="text-[11px] md:text-xs font-bold text-slate-700">
-                  Full Name *
+                  Full Name / Club Name *
                 </label>
                 <div className="relative">
                   <User className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
@@ -99,7 +99,7 @@ export function ContactForm() {
                     id="name"
                     type="text"
                     required
-                    placeholder="e.g. Abrar Fahim"
+                    placeholder="e.g. Notre Dame Math Club / Abrar Fahim"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 bg-white text-xs md:text-sm text-slate-900 focus:border-indigo-600 focus:outline-none transition-colors min-h-[44px]"
@@ -136,7 +136,7 @@ export function ContactForm() {
                 <input
                   id="subject"
                   type="text"
-                  placeholder="e.g. Inquiry regarding Bi-Weekly Contest #25"
+                  placeholder="e.g. Offline Club Exam Center Partnership Request"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 bg-white text-xs md:text-sm text-slate-900 focus:border-indigo-600 focus:outline-none transition-colors min-h-[44px]"
@@ -153,7 +153,7 @@ export function ContactForm() {
                 id="message"
                 required
                 rows={3}
-                placeholder="Write your message or detailed inquiry here..."
+                placeholder="Write your message, cohort query, or club partnership details..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="w-full p-3.5 rounded-xl border border-slate-300 bg-white text-xs md:text-sm text-slate-900 focus:border-indigo-600 focus:outline-none transition-colors"

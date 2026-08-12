@@ -21,12 +21,12 @@ export function HeroSection() {
             {/* Dark Badge */}
             <Badge variant="indigo" className="py-1.5 px-3.5 text-xs font-bold gap-2 bg-slate-800 text-indigo-300 border border-indigo-500/40 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="tracking-wide text-[11px] sm:text-xs">100% Non-Profit EdTech Ecosystem in Bangladesh</span>
+              <span className="tracking-wide text-[11px] sm:text-xs">Math Olympiad Archive & Cohorts Launching</span>
             </Badge>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Transforming Academic Rigor into{" "}
+              Transforming Math Olympiad Preparation into{" "}
               <span className="text-indigo-400">
                 Pure Intellectual Discovery
               </span>
@@ -34,22 +34,22 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
-              A modern non-profit platform empowering Bangladesh&apos;s youth through structured Olympiad training, bi-weekly contests, and progressive hint architecture.
+              Bangladesh&apos;s central non-profit ecosystem featuring structured Math Olympiad archives, medalist-led live courses for Primary, Junior & Secondary sections, and nationwide club assessment loops.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto pt-1">
               <Button asChild variant="gradient" size="lg" className="shadow-lg shadow-indigo-500/25">
-                <Link href="/academics" className="flex items-center justify-center gap-2">
-                  <span>Explore Pathways</span>
+                <Link href="/courses" className="flex items-center justify-center gap-2">
+                  <span>Join Live Cohorts</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
 
               <Button asChild variant="outline" size="lg" className="border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white">
-                <Link href="/about" className="flex items-center justify-center gap-2">
+                <Link href="/academics" className="flex items-center justify-center gap-2">
                   <BookOpen className="h-5 w-5 text-indigo-400" />
-                  <span>Read Concept Paper</span>
+                  <span>Explore Math Archive</span>
                 </Link>
               </Button>
             </div>
@@ -58,15 +58,15 @@ export function HeroSection() {
             <div className="pt-4 border-t border-slate-800 w-full flex flex-wrap items-center gap-4 sm:gap-6 text-xs font-semibold text-slate-300">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                <span>Progressive Hinting (Zero Spoilers)</span>
+                <span>Primary, Junior & Secondary Cohorts</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-indigo-400" />
-                <span>Medalist Faculty Mentorship</span>
+                <span>Progressive Scaffolding Archive</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-purple-400" />
-                <span>Free Open Archives</span>
+                <span>Nationwide Club Exam Network</span>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ export function HeroSection() {
                   </div>
                 </div>
                 <Badge variant="indigo" className="text-[10px] bg-indigo-500/20 text-indigo-300 border-indigo-500/40">
-                  Level 3 Track
+                  Secondary Section
                 </Badge>
               </div>
 

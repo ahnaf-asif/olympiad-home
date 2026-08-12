@@ -5,16 +5,16 @@ import { DisciplineCard, Discipline } from "./DisciplineCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, X, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 
 const disciplinesData: Discipline[] = [
   {
     id: "math",
     category: "math",
     title: "Olympiad Mathematics",
-    track: "IMO Track",
-    level: "School to International IMO",
-    description: "Rigorous proof-based mathematics focusing on invariant discovery, algebraic bounds, and non-routine problem solving.",
+    track: "Active Launch Program",
+    level: "Primary, Junior & Secondary Sections",
+    description: "Rigorous proof-based mathematics focusing on invariant discovery, algebraic bounds, and non-routine problem solving across Primary, Junior, and Secondary divisions.",
     topics: ["Combinatorics", "Number Theory", "Euclidean Geometry", "Functional Equations"],
     problemCount: 1450,
     badgeVariant: "indigo",
@@ -23,7 +23,7 @@ const disciplinesData: Discipline[] = [
     id: "physics",
     category: "physics",
     title: "Theoretical Physics",
-    track: "IPhO Track",
+    track: "Upcoming Roadmap Track",
     level: "National & International IPhO",
     description: "Deep mathematical physics covering non-linear mechanics, field theory, thermodynamics, and wave optics.",
     topics: ["Kinematics & Dynamics", "Electromagnetism", "Relativity", "Optics & Waves"],
@@ -34,7 +34,7 @@ const disciplinesData: Discipline[] = [
     id: "informatics",
     category: "informatics",
     title: "Informatics & Algorithms",
-    track: "IOI Track",
+    track: "Upcoming Roadmap Track",
     level: "High School to IOI Podium",
     description: "Competitive programming and algorithm design focusing on asymptotic complexity, graph theory, and dynamic programming.",
     topics: ["Dynamic Programming", "Graph Algorithms", "Segment Trees", "Shortest Paths"],
@@ -45,7 +45,7 @@ const disciplinesData: Discipline[] = [
     id: "economics",
     category: "economics",
     title: "Economics & Logic",
-    track: "IEO Track",
+    track: "Upcoming Roadmap Track",
     level: "National Economics Olympiad",
     description: "Mathematical economics, game-theoretic analysis, mechanism design, and macroeconomic equilibrium models.",
     topics: ["Game Theory", "Mechanism Design", "Microeconomic Equilibrium", "Quantitative Finance"],
@@ -56,7 +56,7 @@ const disciplinesData: Discipline[] = [
     id: "social",
     category: "social",
     title: "Social Sciences & Philosophy",
-    track: "Political Science & Philosophy",
+    track: "Upcoming Roadmap Track",
     level: "New Frontier Track",
     description: "Analytical social science evaluating classical political theory, ethical paradoxes, public policy logic, and epistemology.",
     topics: ["Political Philosophy", "Moral Logic", "Institutional Analysis", "Epistemology"],
@@ -84,15 +84,15 @@ export function DisciplineFilter() {
           subtitle="Explore structured curricula curated by national medalists and university researchers."
         />
 
-        {/* Minimal Category Filter Tabs */}
+        {/* Category Filter Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-8 md:mb-12">
           {[
             { id: "all", label: "All Disciplines" },
-            { id: "math", label: "Mathematics (IMO)" },
-            { id: "physics", label: "Physics (IPhO)" },
-            { id: "informatics", label: "Informatics (IOI)" },
-            { id: "economics", label: "Economics (IEO)" },
-            { id: "social", label: "Social Sciences" },
+            { id: "math", label: "Mathematics (Active Launch)" },
+            { id: "physics", label: "Physics (Roadmap)" },
+            { id: "informatics", label: "Informatics (Roadmap)" },
+            { id: "economics", label: "Economics (Roadmap)" },
+            { id: "social", label: "Social Sciences (Roadmap)" },
           ].map((cat) => (
             <button
               key={cat.id}
@@ -108,7 +108,7 @@ export function DisciplineFilter() {
           ))}
         </div>
 
-        {/* Minimalist Disciplines Grid */}
+        {/* Disciplines Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {filteredDisciplines.map((d) => (
             <DisciplineCard
@@ -119,7 +119,7 @@ export function DisciplineFilter() {
           ))}
         </div>
 
-        {/* Sleek Modal / Detail Drawer when a card is tapped */}
+        {/* Detail Modal when a card is tapped */}
         {selectedDiscipline && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
             <div className="w-full max-w-xl rounded-3xl bg-slate-900 text-white p-6 md:p-8 shadow-2xl border border-slate-800 flex flex-col gap-6 relative animate-in fade-in zoom-in-95 duration-200">
@@ -166,7 +166,7 @@ export function DisciplineFilter() {
               <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-4">
                 <span className="text-xs text-slate-400">Level: {selectedDiscipline.level}</span>
                 <Button variant="gradient" size="default" onClick={() => setSelectedDiscipline(null)}>
-                  <span>Start Practice Now</span>
+                  <span>{selectedDiscipline.category === "math" ? "Start Math Practice" : "View Roadmap"}</span>
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>

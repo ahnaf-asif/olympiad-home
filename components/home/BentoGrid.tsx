@@ -9,35 +9,39 @@ import { Badge } from "@/components/ui/Badge";
 const solutions = [
   {
     icon: Lightbulb,
-    title: "Progressive Hinting Archive",
-    badge: "Scaffolding Engine",
-    description: "Eliminating solution spoilers. Our archive provides multi-tier conceptual prompts (Spark → Lemma → Partial Proof) to build true problem-solving intuition.",
-    highlight: "3,500+ Curated Olympiad Problems",
+    title: "Progressive Math Scaffolding Archive",
+    badge: "Launching in 30 Days",
+    description: "Eliminating solution spoilers. Our Math Olympiad archive provides multi-tier conceptual prompts (Spark → Lemma → Partial Proof) for Combinatorics, Geometry, Number Theory, and Algebra.",
+    highlight: "Primary, Junior & Secondary Problem Sets",
     linkText: "Explore Archive",
+    linkHref: "/academics",
   },
   {
     icon: Trophy,
-    title: "Bi-Weekly Live Contests",
-    badge: "Competitive Loops",
-    description: "Building consistent practice loops with real-time leaderboards, automated test benches, and editorial breakdowns written by national medalists.",
-    highlight: "Math, Physics & Informatics Arenas",
-    linkText: "View Schedule",
+    title: "Medalist-Led Live Cohorts",
+    badge: "Active Enrollment",
+    description: "Interactive live classes for Primary (Class 3-5), Junior (Class 6-8), and Secondary (Class 9-12) sections taught by national IMO medalists & Gonit Utshob coaches.",
+    highlight: "Weekly Live Instruction & Office Hours",
+    linkText: "View Live Cohorts",
+    linkHref: "/courses",
   },
   {
     icon: Compass,
-    title: "Structured Learning Pathways",
-    badge: "Guided Curricula",
-    description: "Step-by-step curricula spanning Number Theory, Combinatorics, Kinematics, Algorithms, and Logic—taking students from school to IMO/IPhO readiness.",
-    highlight: "School to International Divisions",
-    linkText: "See Syllabi",
+    title: "Nationwide Club Assessment Network",
+    badge: "Club Partnerships",
+    description: "Partnering with school and college math clubs across Bangladesh to conduct synchronized online assessments and local offline mock exams.",
+    highlight: "School & College Club Exam League",
+    linkText: "Partner With Us",
+    linkHref: "/contact",
   },
   {
     icon: Users,
-    title: "National & International Faculty",
-    badge: "Medalist Mentorship",
-    description: "Live cohort classes and direct Q&A led by Bangladesh's proven IMO, IPhO, and IOI medalists, university researchers, and veteran coaches.",
-    highlight: "Live Cohort Workshops & Office Hours",
-    linkText: "Meet Faculty",
+    title: "100% Non-Profit Foundation Core",
+    badge: "Open Access Guarantee",
+    description: "Course fees directly fund hosting, cloud server scaling, open problem archives, and travel scholarships for underprivileged students across all 64 districts.",
+    highlight: "100% Reinvested in Bangladesh Youth",
+    linkText: "Our Governance",
+    linkHref: "/about",
   },
 ];
 
@@ -47,9 +51,9 @@ export function BentoGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <SectionHeading
-          badge="Systemic Engineering"
-          title="Solving the Core Bottlenecks of Olympiad Education"
-          subtitle="Replacing fragmented PDF archives and binary answer keys with structured cognitive scaffolding."
+          badge="Core Launch Pillars"
+          title="Building Bangladesh's Math Olympiad Ecosystem"
+          subtitle="Replacing fragmented PDF archives and static answer keys with structured cognitive scaffolding and live medalist mentorship."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
@@ -82,7 +86,7 @@ export function BentoGrid() {
                 <div className="pt-4 md:pt-6 border-t border-slate-100 mt-4 md:mt-6 flex items-center justify-between text-xs font-bold">
                   <span className="text-slate-600 text-[11px] md:text-xs">{item.highlight}</span>
                   <Link
-                    href="/academics"
+                    href={item.linkHref}
                     className="text-indigo-600 hover:text-indigo-700 flex items-center gap-1"
                   >
                     <span>{item.linkText}</span>
