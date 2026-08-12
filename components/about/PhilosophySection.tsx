@@ -42,14 +42,14 @@ export function PhilosophySection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-slate-50 p-6 md:p-8 border border-slate-200/80 shadow-xs flex flex-col justify-between hover:border-indigo-300 hover:shadow-md transition-all"
+                className="rounded-2xl bg-slate-50 p-6 md:p-8 border border-slate-200/80 shadow-xs flex flex-col justify-between hover:border-amber-400 hover:shadow-md transition-all"
               >
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-xs">
-                      <Icon className="h-5 w-5" />
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500 text-slate-950 shadow-xs">
+                      <Icon className="h-5 w-5 stroke-[2.5]" />
                     </div>
-                    <Badge variant="indigo" className="text-[10px]">
+                    <Badge variant="amber" className="text-[10px]">
                       {item.badge}
                     </Badge>
                   </div>
