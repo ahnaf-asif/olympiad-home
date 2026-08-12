@@ -8,9 +8,9 @@ import { Badge } from "@/components/ui/Badge";
 
 export function HeroSection() {
   return (
-    <section className="bg-slate-900 text-white py-10 md:py-20 lg:py-24 border-b border-slate-800 relative overflow-hidden">
+    <section className="bg-slate-900 text-white py-12 md:py-20 lg:py-24 border-b border-slate-800 relative overflow-hidden">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-indigo-600/15 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-indigo-600/15 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -18,63 +18,61 @@ export function HeroSection() {
           {/* Left Column: Hero Copy */}
           <div className="lg:col-span-7 flex flex-col items-start gap-4 sm:gap-6">
             
-            {/* Dark Badge */}
-            <Badge variant="indigo" className="py-1.5 px-3.5 text-xs font-bold gap-2 bg-slate-800 text-indigo-300 border border-indigo-500/40 shadow-sm">
+            {/* Status Badge */}
+            <Badge variant="indigo" className="py-1 px-3 text-[11px] sm:text-xs font-bold gap-2 bg-slate-800 text-indigo-300 border border-indigo-500/40 shadow-xs">
               <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="tracking-wide text-[11px] sm:text-xs">Math Olympiad Archive & Cohorts Launching</span>
+              <span>Math Olympiad Archive & Live Cohorts</span>
             </Badge>
 
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Transforming Math Olympiad Preparation into{" "}
-              <span className="text-indigo-400">
-                Pure Intellectual Discovery
-              </span>
+            {/* Short Punchy Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+              Olympiad Math, <br className="hidden sm:inline" />
+              <span className="text-indigo-400">Reimagined.</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
-              Bangladesh&apos;s central non-profit ecosystem featuring structured Math Olympiad archives, medalist-led live courses for Primary, Junior & Secondary sections, and nationwide club assessment loops.
+            <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-xl font-normal">
+              Open problem archives and medalist-led live courses for Primary, Junior, and Secondary sections across Bangladesh.
             </p>
 
-            {/* CTAs */}
+            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto pt-1">
               <Button asChild variant="gradient" size="lg" className="shadow-lg shadow-indigo-500/25">
                 <Link href="/courses" className="flex items-center justify-center gap-2">
                   <span>Join Live Cohorts</span>
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
 
               <Button asChild variant="outline" size="lg" className="border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white">
                 <Link href="/academics" className="flex items-center justify-center gap-2">
-                  <BookOpen className="h-5 w-5 text-indigo-400" />
+                  <BookOpen className="h-4 w-4 text-indigo-400" />
                   <span>Explore Math Archive</span>
                 </Link>
               </Button>
             </div>
 
             {/* Value Highlights */}
-            <div className="pt-4 border-t border-slate-800 w-full flex flex-wrap items-center gap-4 sm:gap-6 text-xs font-semibold text-slate-300">
+            <div className="pt-4 border-t border-slate-800/80 w-full flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-semibold text-slate-300">
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                <span>Primary, Junior & Secondary Cohorts</span>
+                <CheckCircle2 className="h-4 w-4 text-emerald-400 flex-shrink-0" />
+                <span>Primary, Junior & Secondary</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-indigo-400" />
+                <CheckCircle2 className="h-4 w-4 text-indigo-400 flex-shrink-0" />
                 <span>Progressive Scaffolding Archive</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-purple-400" />
-                <span>Nationwide Club Exam Network</span>
+                <CheckCircle2 className="h-4 w-4 text-purple-400 flex-shrink-0" />
+                <span>Nationwide Club Network</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Hero Showcase Card */}
-          <div className="lg:col-span-5">
-            <div className="rounded-2xl bg-slate-800/90 p-5 md:p-8 shadow-xl border border-slate-700 flex flex-col gap-4 sm:gap-6">
+          {/* Right Column: Hero Showcase Card (Desktop Only to eliminate mobile cognitive clutter) */}
+          <div className="hidden lg:block lg:col-span-5">
+            <div className="rounded-2xl bg-slate-800/90 p-6 md:p-8 shadow-xl border border-slate-700 flex flex-col gap-5">
               
               <div className="flex items-center justify-between border-b border-slate-700 pb-3">
                 <div className="flex items-center gap-2.5">
@@ -82,7 +80,7 @@ export function HeroSection() {
                     <Brain className="h-4 w-4" />
                   </div>
                   <div>
-                    <h3 className="text-xs sm:text-sm font-bold text-white">
+                    <h3 className="text-sm font-bold text-white">
                       Combinatorics Problem #402
                     </h3>
                     <p className="text-[11px] text-slate-400">IMO National Track</p>
