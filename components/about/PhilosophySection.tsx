@@ -42,14 +42,14 @@ export function PhilosophySection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-slate-50 p-6 md:p-8 border border-slate-200/80 shadow-xs flex flex-col justify-between hover:border-amber-400 hover:shadow-md transition-all"
+                className="rounded-2xl bg-slate-50 p-6 md:p-8 border border-slate-200/80 shadow-xs flex flex-col justify-between hover:border-indigo-300 hover:shadow-md transition-all"
               >
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center justify-between">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500 text-slate-950 shadow-xs">
                       <Icon className="h-5 w-5 stroke-[2.5]" />
                     </div>
-                    <Badge variant="amber" className="text-[10px]">
+                    <Badge variant="indigo" className="text-[10px]">
                       {item.badge}
                     </Badge>
                   </div>
@@ -71,14 +71,14 @@ export function PhilosophySection() {
         <div className="rounded-3xl bg-slate-900 text-white p-6 md:p-10 border border-slate-800 shadow-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            {/* Left Side: Mathematical Geometric Art Image */}
+            {/* Left Side: Minimalist Chalkboard Math Image */}
             <div className="lg:col-span-5 overflow-hidden rounded-2xl border border-slate-700/80 shadow-lg relative aspect-4/3 sm:aspect-16/9 lg:aspect-4/3">
               <img
                 src="/manifesto_math_art.jpg"
-                alt="Mathematical Geometric Art and Fibonacci Spiral"
+                alt="Minimalist Chalkboard Math Symbols"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Right Side: Manifesto Quote */}
