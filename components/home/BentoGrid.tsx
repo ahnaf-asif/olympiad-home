@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { Lightbulb, Trophy, Compass, Users, ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Badge } from "@/components/ui/Badge";
 
 const solutions = [
   {
@@ -49,9 +48,8 @@ export function BentoGrid() {
   return (
     <section className="py-12 md:py-20 lg:py-24 bg-slate-50 border-b border-slate-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         <SectionHeading
-          badge="Core Launch Pillars"
           title="Building Bangladesh's Math Olympiad Ecosystem"
           subtitle="Replacing fragmented PDF archives and static answer keys with structured cognitive scaffolding and live medalist mentorship."
         />
@@ -69,9 +67,9 @@ export function BentoGrid() {
                     <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-xs">
                       <Icon className="h-5 w-5 md:h-6 md:w-6" />
                     </div>
-                    <Badge variant="amber" className="text-[10px] md:text-xs">
+                    <span className="text-[10px] md:text-xs font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-full border border-slate-200/80">
                       {item.badge}
-                    </Badge>
+                    </span>
                   </div>
 
                   <h3 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">

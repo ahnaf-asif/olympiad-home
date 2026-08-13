@@ -36,15 +36,14 @@ export function SustainabilitySection() {
   return (
     <section className="py-12 md:py-20 lg:py-24 bg-slate-50 border-b border-slate-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         <SectionHeading
-          badge="100% Non-Profit Model"
           title="Ethical Sustainability & Reinvestment Cycle"
           subtitle="Course proceeds directly sustain free public infrastructure for every student in Bangladesh."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-          
+
           <div className="lg:col-span-5 flex flex-col gap-4 md:gap-6">
             <Badge variant="emerald" className="py-1.5 px-3.5 text-xs font-bold gap-2 w-fit">
               <Heart className="h-3.5 w-3.5 fill-white text-white" />

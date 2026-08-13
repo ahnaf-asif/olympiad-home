@@ -34,9 +34,8 @@ export function InteractiveFeatures() {
   return (
     <section className="py-12 md:py-20 lg:py-24 bg-white border-b border-slate-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         <SectionHeading
-          badge="Technology Roadmap"
           title="Gamified Practice & Next-Gen Verification"
           subtitle="Explore the upcoming interactive features being engineered for our digital ecosystem."
         />
@@ -51,28 +50,25 @@ export function InteractiveFeatures() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`p-4 md:p-6 rounded-2xl border text-left transition-all flex flex-col justify-between gap-3 md:gap-4 cursor-pointer min-h-[44px] ${
-                  isActive
+                className={`p-4 md:p-6 rounded-2xl border text-left transition-all flex flex-col justify-between gap-3 md:gap-4 cursor-pointer min-h-[44px] ${isActive
                     ? "bg-indigo-600 text-white border-indigo-600 shadow-md"
                     : "bg-slate-50 text-slate-900 border-slate-200 hover:bg-slate-100"
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between w-full">
                   <div
-                    className={`flex h-9 w-9 items-center justify-center rounded-xl ${
-                      isActive
+                    className={`flex h-9 w-9 items-center justify-center rounded-xl ${isActive
                         ? "bg-white/20 text-white"
                         : "bg-indigo-50 text-indigo-600"
-                    }`}
+                      }`}
                   >
                     <Icon className="h-4 w-4" />
                   </div>
                   <span
-                    className={`text-[10px] md:text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 md:px-3 md:py-1 rounded-full ${
-                      isActive
+                    className={`text-[10px] md:text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 md:px-3 md:py-1 rounded-full ${isActive
                         ? "bg-white/20 text-white"
                         : "bg-slate-200 text-slate-700"
-                    }`}
+                      }`}
                   >
                     {tab.badge}
                   </span>
@@ -83,9 +79,8 @@ export function InteractiveFeatures() {
                     {tab.title}
                   </h3>
                   <p
-                    className={`text-xs mt-0.5 leading-relaxed ${
-                      isActive ? "text-indigo-100" : "text-slate-600"
-                    }`}
+                    className={`text-xs mt-0.5 leading-relaxed ${isActive ? "text-indigo-100" : "text-slate-600"
+                      }`}
                   >
                     {tab.subtitle}
                   </p>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Brain, CheckCircle2, Clock } from "lucide-react";
+import { ArrowRight, BookOpen, Brain, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 
@@ -17,12 +17,6 @@ export function HeroSection() {
           
           {/* Left Column: Hero Copy */}
           <div className="lg:col-span-7 flex flex-col items-start gap-4 sm:gap-6">
-            
-            {/* Status Badge */}
-            <Badge variant="indigo" className="py-1 px-3 text-[11px] sm:text-xs font-bold gap-2 bg-slate-800 text-indigo-300 border border-indigo-500/40 shadow-xs">
-              <Clock className="h-3.5 w-3.5 text-amber-400" />
-              <span>Launch Phase 1: Archiving & Live Cohorts</span>
-            </Badge>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
@@ -34,16 +28,26 @@ export function HeroSection() {
               Open problem archives and medalist-led live courses for Primary, Junior, and Secondary sections across Bangladesh.
             </p>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto pt-1">
-              <Button asChild variant="gradient" size="lg" className="shadow-lg shadow-indigo-500/25">
+            {/* Action Buttons (Equal top & bottom pt-10 spacing) */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto pt-10">
+              <Button
+                asChild
+                variant="gradient"
+                size="default"
+                className="h-11 sm:h-14 px-5 sm:px-8 text-xs sm:text-base font-bold shadow-lg shadow-indigo-500/25"
+              >
                 <Link href="/courses" className="flex items-center justify-center gap-2">
                   <span>Cohorts Opening Soon</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
 
-              <Button asChild variant="outline" size="lg" className="border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white">
+              <Button
+                asChild
+                variant="outline"
+                size="default"
+                className="h-11 sm:h-14 px-5 sm:px-8 text-xs sm:text-base font-bold border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white"
+              >
                 <Link href="/contact" className="flex items-center justify-center gap-2">
                   <BookOpen className="h-4 w-4 text-indigo-400" />
                   <span>Join Launch Waitlist</span>
@@ -51,8 +55,8 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Value Highlights */}
-            <div className="pt-4 border-t border-slate-800/80 w-full flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-semibold text-slate-300">
+            {/* Value Highlights (3 Bullet Points) */}
+            <div className="pt-10 border-slate-800/80 w-full flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-semibold text-slate-300">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                 <span>Primary, Junior & Secondary</span>
